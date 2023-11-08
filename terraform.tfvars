@@ -3,3 +3,7 @@ region = "us-central1"
 gke-pod-range = "10.48.0.0/14"
 gke-service-range = ""  # Leave empty or set an actual value
 default_zone = "us-central1-a"
+db_user = "root"
+db_pass = "tobechanged"
+database_name = "sql-staging"
+database_version = "MYSQL_8_0"

@@ -29,6 +29,18 @@ module "gke" {
   subnet-name       = module.vpc.vpc_name
 }
 
+module "sql" {
+  source = "./sql"
+  project_id = var.project_id
+  region = var.region
+  database_version = var.database_version
+  tier = var.tier
+  database_name = var.database_name
+  db_pass = var.db_pass
+  db_user = var.db_user
+  vpc-id = module.vpc.vpc_id
+}
+
 # module "deployment" {
 #   source            = "./deployment"
 #   project_id        = var.project_id
