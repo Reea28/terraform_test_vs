@@ -1,0 +1,1 @@
+{"Modules":[{"Key":"","Source":"","Dir":"."},{"Key":"deployment","Source":"./backend-app/deployment","Dir":"backend-app/deployment"},{"Key":"gke","Source":"./gke","Dir":"gke"},{"Key":"vpc","Source":"./vpc","Dir":"vpc"}]}
