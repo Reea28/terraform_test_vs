@@ -13,6 +13,7 @@ variable "gke-pod-range" {
 
 variable "gke-service-range" {
   type = string
+  default = "gke-service-range"
 }
 
 variable "default_zone" {

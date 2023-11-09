@@ -1,1 +1,1 @@
-{"Modules":[{"Key":"","Source":"","Dir":"."},{"Key":"deployment","Source":"./backend-app/deployment","Dir":"backend-app/deployment"},{"Key":"gke","Source":"./gke","Dir":"gke"},{"Key":"sql","Source":"./sql","Dir":"sql"},{"Key":"vpc","Source":"./vpc","Dir":"vpc"}]}
+{"Modules":[{"Key":"","Source":"","Dir":"."},{"Key":"deployment","Source":"./deployment","Dir":"deployment"},{"Key":"gke","Source":"./gke","Dir":"gke"},{"Key":"sql","Source":"./sql","Dir":"sql"},{"Key":"vpc","Source":"./vpc","Dir":"vpc"}]}

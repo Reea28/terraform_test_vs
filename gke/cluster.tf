@@ -34,7 +34,7 @@ resource "google_container_cluster" "primary" {
 
   ip_allocation_policy {
     cluster_secondary_range_name  = "gke-pod-range"
-    //services_secondary_range_name = "your-service-range"
+    services_secondary_range_name = "gke-service-range"
   }
 
   private_cluster_config {
@@ -50,6 +50,13 @@ resource "google_container_cluster" "primary" {
 resource "google_service_account" "kubernetes" {
   account_id = "kubernetes"
   project    = var.project_id
+}
+
+resource "google_project_iam_member" "roles" {
+  for_each = toset(var.roles)
+  project  = var.project_id
+  role     = each.value
+  member   = "serviceAccount:${google_service_account.kubernetes.email}"
 }
 
 # https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/container_node_pool

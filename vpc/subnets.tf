@@ -10,5 +10,9 @@ resource "google_compute_subnetwork" "private" {
     range_name = var.gke-pod-range
     ip_cidr_range = "10.48.0.0/14"
   }
+  secondary_ip_range {
+    range_name = var.gke-service-range
+    ip_cidr_range = "10.52.0.0/20"
+  }
 
 }

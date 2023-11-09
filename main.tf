@@ -45,20 +45,15 @@ module "sql" {
 #   source            = "./deployment"
 #   project_id        = var.project_id
 #   region            = var.region
-#   gke-service-range = var.gke-service-range
 #   default_zone      = var.default_zone
-# }
-# data "terraform_remote_state" "gke" {
-#   backend = "gcs"
+#     database_version = var.database_version
+#   tier = var.tier
+#   database_name = var.database_name
+#   db_pass = var.db_pass
+#   db_user = var.db_user
+#   vpc-id = module.vpc.vpc_id
+#}
 
-#   config = {
-#     bucket  = "8c7df73616d29025-bucket-tfstate"
-#     prefix = "terraform/state"
-#   }
-# }
-
-
-# d
 
 
 

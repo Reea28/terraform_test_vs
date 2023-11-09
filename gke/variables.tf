@@ -31,3 +31,17 @@ variable "vpc-name" {
 variable "subnet-name" {
   type = string
 }
+
+variable "roles" {
+  type = list(string)
+  default = [ 
+    "roles/artifactregistry.reader",
+    "roles/storage.objectViewer",
+    "roles/servicemanagement.serviceController",
+    "roles/logging.logWriter",
+    "roles/monitoring.admin",
+    "roles/cloudtrace.agent"
+  ]
+  description = "list of roles for the node pool service account."
+  
+}
